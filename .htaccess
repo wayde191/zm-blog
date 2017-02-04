@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^ihakula.com [NC]
+RewriteRule ^(.*)$ http://www.ihakula.com:9000$1 [L,R=301]
+RedirectMatch 301 ^/zm-blog/(.*)$ http://no1.ihakula.com/$1
+</IfModule>
